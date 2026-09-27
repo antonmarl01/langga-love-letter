@@ -1,73 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Langga ❤️</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffd9e5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 500px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        h1 {
-            color: #e83e70;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        button {
-            background: #e83e70;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Langga ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#ffd9ec,transparent 35%),linear-gradient(135deg,#fff1f7,#ffd0e5 48%,#f6b6d2);font-family:'Playfair Display',serif;color:#7c2853;overflow:hidden}
+.bg span{position:fixed;bottom:-40px;animation:up 9s linear infinite;opacity:.65;font-size:20px}
+@keyframes up{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.card{position:relative;z-index:3;width:min(92%,560px);min-height:590px;padding:42px 28px;border-radius:34px;text-align:center;background:rgba(255,255,255,.60);border:2px solid rgba(255,255,255,.8);box-shadow:0 25px 70px #a83d6a38;backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;margin:6vh auto}
+.page{display:none;animation:in .7s ease}.page.active{display:block}
+@keyframes in{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.script{font-family:'Great Vibes',cursive;color:#d63d7d}
+h1{font-size:clamp(46px,12vw,72px);margin:8px 0 20px}
+h2{font-family:'Caveat',cursive;font-size:42px;margin:5px 0 18px}
+p{font-size:18px;line-height:1.8;margin:12px auto;max-width:460px}
+.btn{margin-top:25px;border:0;border-radius:999px;padding:14px 28px;background:linear-gradient(135deg,#ff6fa9,#d83e80);color:white;font-family:'Playfair Display';font-size:16px;cursor:pointer;box-shadow:0 9px 25px #d83e8050}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+.dots{position:absolute;bottom:18px;left:0;right:0;font-size:12px;letter-spacing:5px;color:#d05b89}
+.bouquet{font-size:76px;line-height:1.05;margin:0 auto 8px;filter:drop-shadow(0 10px 12px #b84d7b35)}
+.bouquet .flowers{display:block;letter-spacing:-14px;transform:translateX(-5px)}
+.bouquet .plushies{display:block;font-size:54px;margin-top:-18px;letter-spacing:-7px}
+.bouquet .wrap{display:block;font-size:88px;margin-top:-30px;transform:rotate(-2deg)}
+.bouquet-note{font-family:'Caveat',cursive;font-size:20px;color:#b24773;margin-top:-12px}
+.love{font-size:70px}
+.small{font-family:'Caveat';font-size:24px;color:#a6426b}
+</style>
 </head>
-
 <body>
+<div class="bg" id="bg"></div>
+<main class="card">
 
-<div class="card">
-    <h1>Hi Langga ❤️</h1>
+<section class="page active" id="p1">
+<div class="love">♡</div>
+<h2>Hello, langga...</h2>
+<p>Thank you kasi dumating ka sa buhay ko. Hindi ko man masabi palagi, pero sobrang thankful ako na nakilala kita.</p>
+<p class="small">You made my days a little softer and my world a little brighter. ♡</p>
+<button class="btn" onclick="next(2)">May sasabihin pa ako →</button>
+<div class="dots">● ○ ○ ○</div>
+</section>
 
-    <p>
-        May gusto lang akong sabihin sa'yo...
-    </p>
+<section class="page" id="p2">
+<div class="love">💗</div>
+<h1 class="script">Our Future</h1>
+<p>Gusto kong mag-build ng future with you.</p>
+<p>Hindi kailangan perfect. Gusto ko lang yung future na sabay nating binubuo—yung maraming ordinaryong araw, maliit na moments, tawanan, at memories na atin.</p>
+<button class="btn" onclick="next(3)">May isa pa... →</button>
+<div class="dots">○ ● ○ ○</div>
+</section>
 
-    <button onclick="showMessage()">
-        Click mo ako 💌
-    </button>
-
-    <p id="message"></p>
+<section class="page" id="p3">
+<div class="bouquet" aria-label="Pink lily bouquet with plushies">
+  <span class="flowers">🌸🌷🪷🌸🌷</span>
+  <span class="plushies">🧸 🧸</span>
+  <span class="wrap">💐</span>
 </div>
+<div class="bouquet-note">a little pink bouquet for you ♡</div>
+<h2>For you, langga 🌸</h2>
+<p>Sana tanggapin mo muna itong flowers na 'to for now. 🌷</p>
+<p class="small">Soon, totoong flowers na yung maaamoy at mahahawakan mo na. I can't wait to give them to you myself. ♡</p>
+<button class="btn" onclick="next(4)">Last na... promise →</button>
+<div class="dots">○ ○ ● ○</div>
+</section>
 
+<section class="page" id="p4">
+<div class="love">💞</div>
+<h1 class="script">I Love You</h1>
+<p>More than these little words can explain.</p>
+<p>Thank you for being you, langga. I'm happy you're here, and I hope I get to make more beautiful memories with you.</p>
+<h2 class="script">I love you, always. ♡</h2>
+<div class="small">— from someone who wants to keep choosing you</div>
+<div class="dots">○ ○ ○ ●</div>
+</section>
+
+</main>
 <script>
-    function showMessage() {
-        document.getElementById("message").innerHTML =
-        "I love you so much! ❤️ Thank you for always being there.";
-    }
+function next(n){
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+ document.getElementById('p'+n).classList.add('active');
+ burst();
+}
+function burst(){
+ for(let i=0;i<18;i++){
+  const e=document.createElement('span');e.textContent=['♡','♥','💗','✨','🌸'][Math.floor(Math.random()*5)];
+  e.style.position='fixed';e.style.left=(45+Math.random()*10)+'%';e.style.top=(45+Math.random()*10)+'%';e.style.zIndex=8;e.style.fontSize=(15+Math.random()*22)+'px';e.style.transition='1.5s ease-out';
+  document.body.appendChild(e);setTimeout(()=>{e.style.transform=`translate(${(Math.random()-.5)*500}px,${(Math.random()-.5)*500}px)`;e.style.opacity=0},20);setTimeout(()=>e.remove(),1600);
+ }
+}
+for(let i=0;i<25;i++){let s=document.createElement('span');s.textContent=['♡','♥','✿','✨'][Math.floor(Math.random()*4)];s.style.left=Math.random()*100+'%';s.style.animationDelay=Math.random()*9+'s';s.style.animationDuration=(7+Math.random()*7)+'s';document.getElementById('bg').appendChild(s)}
 </script>
-
 </body>
 </html>
